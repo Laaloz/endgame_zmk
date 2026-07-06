@@ -1,0 +1,17 @@
+#include "endgame.dtsi"
+
+&kscan0 {
+	col-gpios
+		= <&pro_micro 4 GPIO_ACTIVE_HIGH>   /* COL0 outer  */
+		, <&pro_micro 5 GPIO_ACTIVE_HIGH>   /* COL1 pinky  */
+		, <&pro_micro 6 GPIO_ACTIVE_HIGH>   /* COL2 ring   */
+		, <&pro_micro 7 GPIO_ACTIVE_HIGH>   /* COL3 middle */
+		, <&pro_micro 8 GPIO_ACTIVE_HIGH>   /* COL4 index  */
+		, <&pro_micro 9 GPIO_ACTIVE_HIGH>   /* COL5 inner  */
+		;
+};
+
+/* Oikea puoli on peukalojen/keymapin osalta siirretty sarakkeisiin 6-11 */
+&default_transform {
+	col-offset = <6>;
+};

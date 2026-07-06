@@ -1,0 +1,25 @@
+config SHIELD_ENDGAME_LEFT
+	def_bool $(shields_list_contains,endgame_left)
+
+config SHIELD_ENDGAME_RIGHT
+	def_bool $(shields_list_contains,endgame_right)
+
+if SHIELD_ENDGAME_LEFT
+
+config ZMK_KEYBOARD_NAME
+	default "Endgame Split"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+	default y
+
+config ZMK_SPLIT
+	default y
+
+endif
+
+if SHIELD_ENDGAME_RIGHT
+
+config ZMK_SPLIT
+	default y
+
+endif

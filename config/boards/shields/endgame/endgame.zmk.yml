@@ -1,0 +1,9 @@
+name: endgame
+type: shield
+url: Endgame Split — low-profile Choc wireless split
+requires: [pro_micro]
+features:
+  - keys
+siblings:
+  - endgame_left
+  - endgame_right
