@@ -2,17 +2,17 @@
  * Endgame Split — shared devicetree
  * 44-key low-profile Choc split (6 columns × 4 rows per half).
  *
- * Matriisi (varmistettu PCB:stä endgame_left_v7):
- *   Sarakkeet COL0..COL5 = outer, pinky, ring, middle, index, inner
- *   Rivit     ROW0..ROW3 = top, home, bottom, thumb
- *   Peukalot (ROW3): thumb_inner=COL2, thumb_near=COL3, thumb_mid=COL4, thumb_far=COL5
- *   (sarakkeet 0 ja 1 tyhjät riville 3)
+ * Matrix (verified from the endgame_left_v7 PCB):
+ *   Columns COL0..COL5 = outer, pinky, ring, middle, index, inner
+ *   Rows    ROW0..ROW3 = top, home, bottom, thumb
+ *   Thumbs (ROW3): thumb_inner=COL2, thumb_near=COL3, thumb_mid=COL4, thumb_far=COL5
+ *   (columns 0 and 1 are empty on row 3)
  *
- * Kytkennän diodit: COL -> switch -> diode -> ROW  => diode-direction = "col2row"
- * (sarakkeet ovat ajavia lähtöjä, rivit luettavia tuloja)
+ * Diode wiring: COL -> switch -> diode -> ROW  => diode-direction = "col2row"
+ * (columns are the driven outputs, rows are the read inputs)
  *
- * nice!nano pro_micro -pinnit (footprintin silkkimerkintöjen mukaan):
- *   COL0..COL5 = pro_micro 4,5,6,7,8,9   (P0.xx-vastineet hoituu boardin kautta)
+ * nice!nano pro_micro pins (per the footprint silkscreen):
+ *   COL0..COL5 = pro_micro 4,5,6,7,8,9   (P0.xx mapping handled by the board)
  *   ROW0..ROW3 = pro_micro 21,20,19,18
  */
 
@@ -30,11 +30,11 @@
 		columns = <12>;
 		rows = <4>;
 
-		/* Vasen puoli sarakkeet 0-5, oikea puoli sarakkeet 6-11.
-		 * Näppäinjärjestys keymapissa: rivi ylhäältä alas,
-		 * vasen ulkoa sisään | oikea sisältä ulos.
+		/* Left half columns 0-5, right half columns 6-11.
+		 * Key order in the keymap: rows top to bottom,
+		 * left outer-to-inner | right inner-to-outer.
 		 *
-		 * Peukalot: vas. inner,near,mid,far | oik. far,mid,near,inner
+		 * Thumbs: left inner,near,mid,far | right far,mid,near,inner
 		 */
 		map = <
 RC(0,0) RC(0,1) RC(0,2) RC(0,3) RC(0,4) RC(0,5)   RC(0,11) RC(0,10) RC(0,9) RC(0,8) RC(0,7) RC(0,6)
@@ -45,11 +45,10 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5)   RC(2,11) RC(2,10) RC(2,9) RC(2
 	};
 
 	/*
-	 * Fyysinen layout — pakollinen ZMK Studio -tuelle.
-	 * Näppäinten järjestys on sama kuin matrix_transform-map:issa ja
-	 * keymapissa (44 näppäintä): rivi kerrallaan ylhäältä alas,
-	 * vasen puoli ensin, sitten oikea; peukalot viimeisenä.
-	 * Yksikkö = 1/100 näppäintä. Vasen puoli x=0..5, oikea x=8..13.
+	 * Physical layout — required for ZMK Studio.
+	 * Key order matches the matrix_transform map and the keymap
+	 * (44 keys): row by row, top to bottom, left half first then right;
+	 * thumbs last. Unit = 1/100 of a key. Left half x=0..5, right x=8..13.
 	 */
 	physical_layout0: physical_layout_0 {
 		compatible = "zmk,physical-layout";

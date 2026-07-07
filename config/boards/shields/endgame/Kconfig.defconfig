@@ -1,8 +1,4 @@
-config SHIELD_ENDGAME_LEFT
-	def_bool $(shields_list_contains,endgame_left)
-
-config SHIELD_ENDGAME_RIGHT
-	def_bool $(shields_list_contains,endgame_right)
+# Shield symbols are declared in Kconfig.shield; this file only sets defaults.
 
 if SHIELD_ENDGAME_LEFT
 

@@ -1,4 +1,4 @@
-# West-manifesti — ZMK user config -workspace
+# West manifest — ZMK user-config workspace
 manifest:
   remotes:
     - name: zmkfirmware

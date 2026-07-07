@@ -6,24 +6,24 @@
 /*
  * Endgame Split — keymap
  *
- * Layerit:
- *   0 BASE  QWERTY + home-row-modit (GACS). Toimii sekä EN- että FI-
- *           käyttöjärjestelmälayoutilla (HID on paikkaperustainen).
- *   1 NUM   numerot + navigointi
- *   2 SYM   symbolit + FI-merkit (ä ö å ovat suoraan BASElla FI-layoutilla;
- *           SYM antaa loput []{}\ ym. sekä AltGr-merkit)
- *   3 FUN   funktionäppäimet, media, Bluetooth
+ * Layers:
+ *   0 BASE  QWERTY + home-row mods (GACS). Works on both EN and FI
+ *           OS layouts (HID is position-based).
+ *   1 NUM   numbers + navigation
+ *   2 SYM   symbols + FI characters (ä ö å come directly from BASE on the FI
+ *           layout; SYM provides the rest []{}\ etc. and AltGr characters)
+ *   3 FUN   function keys, media, Bluetooth
  *
  * FI vs EN:
- *   Kun käyttöjärjestelmän layout = suomalainen, BASE-rivin näppäimet
- *   ; ' [ tuottavat ö ä å automaattisesti (legendat MBK Legend -hatuissa).
- *   Kun layout = US (koodaus), samat näppäimet tuottavat ; ' [.
- *   Keymapin ei tarvitse tietää kummasta on kyse.
+ *   When the OS layout = Finnish, the BASE-row keys
+ *   ; ' [ produce ö ä å automatically (legends on the MBK Legend caps).
+ *   When the layout = US (coding), the same keys produce ; ' [.
+ *   The keymap does not need to know which one is in use.
  *
- * Peukalot (varmistettu näyttötestillä):
- *   Vasen  (ulkoa->keskelle): LGUI | NAV(mo) | TAB(SYM lt) | SPACE(NUM lt)
- *   Oikea  (keskeltä->ulos):  ENTER(NUM lt) | BSPC(SYM lt) | NAV(mo) | RALT/AltGr
- *   Oikean käden lepokohta = keskin näppäin = ENTER.
+ * Thumbs (verified by on-screen test):
+ *   Left  (outer->center): LGUI | FUN(mo 3) | TAB(SYM lt) | SPACE(NUM lt)
+ *   Right (center->outer): ENTER(NUM lt) | BSPC(SYM lt) | FUN(mo 3) | RALT/AltGr
+ *   Right-hand resting key = center key = ENTER.
  */
 
 / {

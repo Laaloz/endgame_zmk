@@ -1,6 +1,6 @@
 name: endgame
 type: shield
-url: Endgame Split — low-profile Choc wireless split
+url: https://github.com/Laaloz/endgame_zmk
 requires: [pro_micro]
 features:
   - keys

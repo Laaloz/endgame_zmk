@@ -11,7 +11,7 @@
 		;
 };
 
-/* Oikea puoli on peukalojen/keymapin osalta siirretty sarakkeisiin 6-11 */
+/* Right half is shifted to columns 6-11 for the keymap/thumbs */
 &default_transform {
 	col-offset = <6>;
 };
