@@ -2,8 +2,8 @@
 # Käännä molemmat puoliskot nice!nano v2:lle. Studio-snapshot päällä.
 ---
 include:
-  - board: nice_nano_v2
+  - board: nice_nano
     shield: endgame_left
     snippet: studio-rpc-usb-uart
-  - board: nice_nano_v2
+  - board: nice_nano
     shield: endgame_right
