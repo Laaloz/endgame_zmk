@@ -47,3 +47,11 @@ All tapping terms, home-row mods and thumbs can be adjusted with ZMK Studio
 (CONFIG_ZMK_STUDIO=y) without reflashing. If a key doesn't register, or
 registers the wrong row/column: first check the col2row direction and the
 pro_micro pins.
+
+<img width="1600" height="1000" alt="keymap-base" src="https://github.com/user-attachments/assets/034da217-4fb8-43a0-94b1-ae2287cd1b2e" />
+
+<img width="1600" height="1000" alt="keymap-fun" src="https://github.com/user-attachments/assets/1227d4e4-b9bb-4c67-bf03-caece1139476" />
+
+<img width="1600" height="1000" alt="keymap-num" src="https://github.com/user-attachments/assets/88267dea-a991-42a8-b3b5-96933553d161" />
+
+<img width="1600" height="1000" alt="keymap-sym" src="https://github.com/user-attachments/assets/7828c694-9b30-43aa-bc4c-a806431b3677" />
