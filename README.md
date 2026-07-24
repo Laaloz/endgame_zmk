@@ -2,6 +2,8 @@
 
 Wireless low-profile split (44 keys, Choc, nice!nano v2, ZMK).
 
+<img width="2048" height="1704" alt="eg-v1" src="https://github.com/user-attachments/assets/39979478-4d00-48ee-b398-5acb06f698cd" />
+
 ## Structure
 ```
 config/
