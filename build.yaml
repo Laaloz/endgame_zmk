@@ -1,5 +1,5 @@
 # Endgame Split — GitHub Actions build matrix
-# Build both halves for the nice!nano v2. ZMK Studio snapshot enabled.
+# Build both halves for the nice!nano v2.
 ---
 include:
   - board: nice_nano_v2
