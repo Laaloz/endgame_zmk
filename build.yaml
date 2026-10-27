@@ -6,3 +6,6 @@ include:
     shield: endgame_left
   - board: nice_nano_v2
     shield: endgame_right
+    # Right half: deep sleep only after 60 min of inactivity (left: 5 min)
+    cmake-args: -DCONFIG_ZMK_IDLE_SLEEP_TIMEOUT=3600000
+    
